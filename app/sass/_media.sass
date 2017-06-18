@@ -1,0 +1,52 @@
+$md: 1030px
+$sm: 690px
+$xs: 430px
+
+.visible-sm
+    display: none
+
+@media (max-width: $md)
+
+    .main-wrap
+        padding: 0
+
+    .main
+        width: 100%
+
+    .nav
+        border-radius: 0
+
+    .slider
+        border-radius: 0
+
+@media (max-width: $sm)
+
+    .hide-sm
+        display: none
+
+    .visible-sm
+        display: block
+
+    .before-after__img-out
+        img
+            height: 100%
+
+    .before-after__window
+        width: 70%
+        height: 200px
+
+    .range__bar
+        width: 150px
+
+    .panel
+        text-align: left
+        padding-left: 50px
+
+@media (max-width: $xs)
+
+    .main
+        min-width: 320px
+        width: auto
+
+    .hide-xs
+        display: none

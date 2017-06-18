@@ -1,0 +1,12 @@
+.gallery(ng-controller="GalleryCtrl")
+	.container
+		h2 Photo Gallery
+		.search
+			input(type="text" placeholder="SearchPhotos" class="" ng-model="search")
+
+		.row
+			.col-3(ng-repeat="url in urls | filter:search")
+				img(ng-src="{{url.imageUrl}}" style="width:100%;height: auto")
+
+
+

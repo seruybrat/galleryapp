@@ -1,0 +1,30 @@
+@mixin font-face($font-family, $file-path, $font-weight, $font-style)
+    @font-face
+        font-family: $font-family
+        src: url('#{$file-path}.woff')
+        src: url('#{$file-path}.ttf') format('truetype')
+        font-weight: $font-weight
+        font-style: $font-style
+
+@include font-face('Macphun', '../fonts/icons/macphun', 300, normal)
+@include font-face('Corsica', '../fonts/corsica/corsica-regular', 300, normal)
+
+[class^="icon-"], [class*=" icon-"]
+    font-family: 'Macphun' !important
+    speak: none
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+.icon-scissors:before 
+    content: '\e841'
+.icon-upload:before
+    content: '\e842'
+.icon-down-arrow:before
+    content: '\e843'
+.icon-eye:before
+    content: '\e844'

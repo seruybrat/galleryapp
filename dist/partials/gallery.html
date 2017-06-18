@@ -1,0 +1,1 @@
+<div ng-controller="GalleryCtrl" class="gallery"><div class="container"><h2>Photo Gallery</h2><div class="search"><input type="text" placeholder="SearchPhotos" ng-model="search"/></div><div class="row"><div ng-repeat="url in urls | filter:search" class="col-3"><img ng-src="{{url.imageUrl}}" style="width:100%;height: auto"/></div></div></div></div>

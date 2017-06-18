@@ -1,0 +1,41 @@
+doctype html
+html(lang='ru' ng-app="app")
+
+	head
+		meta(charset='utf-8')
+
+		title Заголовок
+		meta(name='description', content='')
+
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+
+		link(rel="stylesheet", href="css/main.css")
+
+		
+
+	body()
+
+	.main-wrap
+		main.main()
+			include partials/header
+			<ng-view></ng-view>
+				
+		//- section#lists-container(ng-controller="listsCtrl as listsCtrl")
+		//- 	.row
+		//- 		.col-3(ng-repeat="list in listsCtrl.lists")
+		//- 			img(src="img/{{list.listName}}.jpg" alt="" style="width:80%; height:auto") 
+		//- 	section
+		//- 		form()
+		//- 			input(type="file" id="file" name="file" onchange="listsCtrl.addList(this)")
+		//- 			input(type="submit")
+		
+	script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js")
+	script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.js")
+	script(src="js/ng-file-upload.min.js")
+	script(src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js")
+	script(src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js")
+	script(src="js/common.js")
+	
+	//- script(src="js/factories/listFactory.js")
+	//- script(src="js/controllers/listsCtrl.js")

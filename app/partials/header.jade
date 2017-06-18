@@ -1,0 +1,92 @@
+header.header
+
+	.container
+
+		nav.nav
+
+			.nav__left
+
+				.nav__item.circle-wrap
+					.circle.circle-red
+					.circle.circle-yellow
+					.circle.circle-green
+
+			.nav__right.nav-menu
+				
+				label(for="drop" class="toggle" style="display: none") Menu
+				input(type="checkbox" id="drop")
+
+				ul.list.main-menu
+
+					li.main-menu__item
+						a(href="#/").main-menu__link Home
+
+					li.main-menu__item
+						label(for="drop-1" class="toggle") Service +
+						input(type="checkbox" id="drop-1")
+
+						ul.list.sub-menu
+
+							li.item
+								a(href="#gallery").link Service 1
+							li.item
+								a(href="").link Service 2
+							li.item
+								a(href="").link Service 3
+							li.item
+
+								label(for="drop-3" class="toggle") Gallery +
+								input(type="checkbox" id="drop-3")
+
+								ul.list.sub-menu
+
+									li.item
+										a(href="").link Gallery 1
+									li.item
+										a(href="").link Gallery 2
+									li.item
+										a(href="").link Gallery 3
+									li.item
+										label(for="drop-4" class="toggle") Gallery +
+										input(type="checkbox" id="drop-4")
+
+										ul.list.sub-menu
+											
+											li.item
+												a(href="").link Gallery 1
+											li.item
+												a(href="").link Gallery 2
+											li.item
+												a(href="").link Gallery 3
+				
+					li.main-menu__item
+						label(for="drop-2" class="toggle") Portfolio +
+						input(type="checkbox" id="drop-2")
+
+						ul.list.sub-menu
+
+							li.item
+								a(href="").link Portfolio 1
+							li.item
+								a(href="").link Portfolio 2
+
+
+					li.main-menu__item
+						a(href="#manage").main-menu__link Manage
+
+
+				//- .nav__item
+				//- 	a(href="").btn Export
+
+			.menu-toggle.visible-sm
+				- for (var i=1; i<=3; i++) {
+					span.menu-toggle__el
+				- }
+
+			.mobile-menu.hide
+				.mobile-menu__close x
+
+				ul
+				- for (var i=1; i<=5; i++) {
+					li.example Menu
+				- }

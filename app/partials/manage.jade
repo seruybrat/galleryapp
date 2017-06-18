@@ -1,0 +1,13 @@
+.manage(ng-controller="ManageCtrl")
+	.container
+		h2 manage
+	.clearfix
+		.col-3 Image
+		.col-3 Image Name
+		.col-3 Action
+	.clearfix(ng-repeat="url in urls")
+		.col-3 
+			img(ng-src="{{url.imageUrl}}" style="width:100%")
+		.col-3 {{url.imageName}}
+		.col-3 
+			button(ng-click="deleteFile(url)") Delete
